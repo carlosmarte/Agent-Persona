@@ -65,3 +65,21 @@ To separate AI from human contributions over a year, extract and correlate these
 * **Adoption Maturity Curve:** Track how teams progress over the year from basic autocomplete to multi-file edits and autonomous PRs.
 * **Onboarding Acceleration:** Measure whether newer engineers ramp up faster on unfamiliar repos when assisted by AI.
 * **Skill & Training Gap Identification:** Spot teams with high AI usage but high rework/defect rates to target coaching, better repo context (`AGENTS.md`), or stricter CI gates.
+
+
+## Top 10 Highest-Signal AI vs. Human GitHub Metrics
+
+### Top 10 Highest-Signal Metrics (AI vs. Human)
+
+| Rank | Metric | What It Measures (AI vs. Human) | Executive Signal | Replaces Vanity Metric |
+| :--- | :--- | :--- | :--- | :--- |
+| **1** | **30/90-Day Code Survival Rate** | % of merged lines still intact (not rewritten or deleted) 30 and 90 days later. | Separates durable value from high-churn "AI slop" that creates silent rework. | *Lines of Code (LoC) Generated* |
+| **2** | **Revert & Hotfix Attribution Rate** | % of merged PRs that trigger a `git revert`, rollback, or emergency hotfix in production. | Measures whether AI speed is degrading production stability. | *Total PRs Merged* |
+| **3** | **End-to-End PR Cycle Time (Split)** | Total time from first commit to merge, split into **coding time** vs. **review wait time**. | Shows whether AI accelerated delivery or just shifted the bottleneck to code review. | *Suggestion Acceptance Rate* |
+| **4** | **Verification & Review Tax** | Average review rounds, comments, and human fix-up commits required before an AI PR can merge. | Quantifies the hidden human cost of validating and correcting AI output. | *AI Authorship Share (%)* |
+| **5** | **Post-Merge Defect Density** | Linked bug issues and P1/P2 incidents traced back to AI-originated vs. human-originated PRs. | Connects AI adoption directly to customer-facing quality and support load. | *CI First-Pass Rate* |
+| **6** | **Cost per Merged, Low-Churn PR** | Total AI spend (seats + tokens + extra CI compute) divided by durable, non-reverted AI PRs. | Grounds AI investment in unit economics rather than license utilization. | *Active Seats / DAU* |
+| **7** | **Security & Dependency Injection Delta** | New CodeQL/SAST alerts, secrets, and vulnerable packages introduced per 100 AI vs. human PRs. | Quantifies whether AI is expanding the organization's security and compliance exposure. | *Total Security Scans Run* |
+| **8** | **Toil-to-Core Capacity Shift** | Share of migrations, boilerplate, tests, and tech-debt paydown handled by AI vs. core product logic by humans. | Proves whether AI is actually freeing senior engineers for higher-value work. | *Raw Prompt / Agent Volume* |
+| **9** | **Rubber-Stamp & Reviewer Burnout Rate** | % of large AI PRs approved in seconds with zero comments, plus review concentration on senior engineers. | Surfaces governance breakdown and senior-engineer attrition risk before it hits delivery. | *Average Approvals per PR* |
+| **10** | **CI Compute Overhead per Merged PR** | GitHub Actions minutes burned per merged PR (capturing iterative agent retry loops vs. human pushes). | Exposes hidden infrastructure cost inflation caused by autonomous agent loops. | *Total Workflow Runs* |
